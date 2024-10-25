@@ -41,13 +41,13 @@ public:
     vector<string> removeSubfolders(vector<string>& folder) {
         vector<string> ans;
         sort(folder.begin(),folder.end());
-        string curr=folder.at(0);
+        string curr=folder[0];
         ans.push_back(curr);
         for(int i=1;i<folder.size();i++)
         {
-            if(folder.at(i).find(curr+"/")==string::npos || folder.at(i).find(curr+"/")!=0)
+            if(folder[i].find(curr+"/")==string::npos || folder[i].find(curr+"/")!=0)
             {
-                curr=folder.at(i);
+                curr=folder[i];
                 ans.push_back(curr);
             }
         }
